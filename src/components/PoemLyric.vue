@@ -41,7 +41,7 @@
       </n-button-group>
     </div>
     <div class="flex justify-center">
-      <div class="w-full h-64 p-4 my-10 font-bold leading-8 tracking-wide border border-gray-200 rounded-lg text-ellipsis">
+      <div class="w-full h-64 p-4 my-10 text-lg font-bold leading-8 tracking-wide border border-teal-500 border-double rounded-lg text-ellipsis">
         {{ poemLyric }}
       </div>
     </div>
@@ -82,7 +82,6 @@ async function getPoemLyric(prefix: String) {
       text: prefix + keywords.value.toString(),
     });
     poemLyric.value = result.data.text;
-    console.log(result.data.text);
     if (prefix === 'poem-') {
       loading1.value = false;
     } else {
