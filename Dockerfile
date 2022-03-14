@@ -1,5 +1,5 @@
 # build stage
-FROM node:12.18.1-alpine3.11 as build-stage
+FROM node:14-alpine3.15 as build-stage
 WORKDIR /app
 COPY package*.json ./
 RUN npm install --registry=https://registry.npm.taobao.org
